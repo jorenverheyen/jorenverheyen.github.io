@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Intigriti's March 2021 XSS Challenge</title>
+  <title>Intigriti's December 2021 XSS Challenge</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://jorenverheyen.github.io/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -51,37 +51,35 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Intigriti's March 2021  XSS Challenge</h1>
+        <h1 class="mt-4">Intigriti's December 2021  XSS Challenge</h1>
 
 
         <hr>
 
         <!-- Date/Time -->
-        <p>March 28, 2021</p>
+        <p>December 26, 2021</p>
 
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="https://jorenverheyen.github.io/Intigriti-March-2021/banner.png" alt="banner">
+        <img class="img-fluid rounded" src="https://jorenverheyen.github.io/Intigriti-December-2021/banner.png" alt="banner">
 
         <hr>
 
         <!-- Post Content -->
         <p class="lead"> 
-          At the end of March 2021 the Belgian ethical hacking platform <a href="https://intigriti.com/"> Intigriti</a> hosted a new XSS (cross site scripting) challenge.
+          During the week of Christmas 2021 the Belgian ethical hacking platform <a href="https://intigriti.com/"> Intigriti</a> hosted a new XSS (cross site scripting) challenge.
           </br>
         
           <ul>
-            <li>I was not able to create a writeup in HTML but I uploaded a PDF containing my writeup that can be read below or downloaded: <a href="https://jorenverheyen.github.io/Intigriti-March-2021/inti-march-2021.pdf"> PDF</a></li>
-        <li>I also created a small POC video that shows the XSS attack being delivered to the victim when visiting our webserver containing the exploit: <a href="https://jorenverheyen.github.io/Intigriti-March-2021/inti-march-2021.mov"> POC Video</a></li>
+            <li>I uploaded a PDF containing my writeup that can be read below or downloaded here: <a href="https://jorenverheyen.github.io/Intigriti-December-2021/inti_december_2021.pdf"> PDF</a></li>
+            <li>I also created a small POC video that shows the XSS attack: <a href="https://jorenverheyen.github.io/Intigriti-December-2021/inti_december_2021.mov"> POC Video</a></li>
           </ul>
         </p>
 
         <blockquote class="blockquote">
           <p class="md-0"><h6><i>
-          The POC video shows first the Intigriti page with the default note. Then the victim visits a regular website (google.com) like he is browsing the internet. </br>
-          After that the victim visits the attackers website and automatically the victim is redirected to the Intigriti page that now contains our XSS payload due to the CSRF token being bypassed. </br> 
-          The attackers website redirect in the video takes 20 seconds but this is set like that for debugging purposes and can be done faster.
+          The POC video shows the local MAMP web server running my PHP redirect page to alter the referer HTML comment in the source code of the challenge page. Once the victim visits my webserver a redirect will happen towards the challenge page and the XSS attack will fire.
           </i></h6> </p>
         </blockquote>
 
@@ -90,7 +88,7 @@
         <p class="mb-0">Embedded writeup PDF:</p>
       </blockquote>
 
-      <embed src="https://jorenverheyen.github.io/Intigriti-March-2021/inti-march-2021.pdf" type="application/pdf" width="100%" height="1000px" />
+      <embed src="https://jorenverheyen.github.io/Intigriti-December-2021/inti_december_2021.pdf" type="application/pdf" width="100%" height="1000px" />
       </div>
 
 
